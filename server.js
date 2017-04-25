@@ -29,7 +29,7 @@ router.get('/about', function(req, res) {
 	  space: process.env.SPACE_ID,
 	  accessToken: process.env.ACCESS_TOKEN
 	})
-	client.getEntry(proces.env.ABOUT_ENTRY_ID)
+	client.getEntry(process.env.ABOUT_ENTRY_ID)
 	  .then((response) => {
 	  	res.json(response.fields)
 	  })
@@ -38,8 +38,8 @@ router.get('/about', function(req, res) {
 	  })
 });
 
-// REGISTER ROUTES ON /API
-app.use('/api', router);
+// REGISTER ROUTES
+app.use('', router);
 
 // START THE SERVER
 // =============================================================================
