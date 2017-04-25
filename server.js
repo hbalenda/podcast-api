@@ -1,4 +1,3 @@
-const env        = require('./.env');
 const express    = require('express');
 const app        = express();
 const request    = require('request');
@@ -27,10 +26,10 @@ router.get('/rss', function(req, res) {
 // /ABOUT
 router.get('/about', function(req, res) {
 	const client = contentful.createClient({
-	  space: ENV.SPACE_ID,
-	  accessToken: ENV.ACCESS_TOKEN
+	  space: process.env.SPACE_ID,
+	  accessToken: process.env.ACCESS_TOKEN
 	})
-	client.getEntry(ENV.ABOUT_ENTRY_ID)
+	client.getEntry(proces.env.ABOUT_ENTRY_ID)
 	  .then((response) => {
 	  	res.json(response.fields)
 	  })
