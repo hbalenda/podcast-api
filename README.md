@@ -4,7 +4,19 @@
 
 - Clone: `git clone https://github.com/hbalenda/podcast-api.git`
 - Install dependencies: `npm install`
-- Start the server: `heroku local`
+- Start the server: `heroku local` or `npm start` wtv
 
-## Testing the API
-Test the API using [Postman](https://chrome.google.com/webstore/detail/postman-rest-client-packa/fhbjgbiflinjbdggehcddcbncdddomop)
+## Endpoints
+- GET /about
+  - returns
+
+- GET /rss
+  - returns
+    - json of podcast items
+
+- POST /send-email
+  -specify in request body:
+    - subject
+    - body
+    - name
+    - email
