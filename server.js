@@ -2,10 +2,17 @@ const express    = require('express');
 const app        = express();
 const request    = require('request');
 const Feed       = require('rss-to-json');
-const contentful = require('contentful')
+const contentful = require('contentful');
+const bodyParser = require('body-parser');
 
 const port = process.env.PORT || 8080; // set our port
-
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 // ROUTES
 // =============================================================================
 
