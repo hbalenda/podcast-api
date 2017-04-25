@@ -13,6 +13,7 @@
   },
   "author": "Trust Issues",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "contentful": "^3.8.0",
     "express": "~4.0.0",
     "nodemailer": "^4.0.1",
