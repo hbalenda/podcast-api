@@ -2,7 +2,8 @@
   "name": "podcast-api",
   "main": "server.js",
   "engines": {
-    "node": "7.4.0"
+    "node": "7.4.0",
+    "npm" : "4.4.4"
   },
   "repository": {
     "type": "git",
