@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 
 // SET PORT
-const port = process.env.PORT || 8080;
+const port = process.env.PORT;
 
 // USE BODYPARSER I GUESS
 app.use(bodyParser.urlencoded({extended: true}));
@@ -27,7 +27,7 @@ router.use(function(req, res, next) {
 });
 
 router.get('/rss', require('./routes/rss'));
-router.get('/about', require('./routes/about'));
+router.get('/content', require('./routes/content'));
 router.post('/send-email', require('./routes/sendemail'))
 
 // REGISTER ROUTES
