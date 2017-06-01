@@ -12,7 +12,7 @@ module.exports = function(req, res) {
 
   let mailOptions = {
       from: `${req.body.email}`,
-      to: 'trustissuespod@gmail.com',
+      to: process.env.SUBMISSION_EMAIL,
       subject: req.body.subject,
       text: req.body.body
   };
