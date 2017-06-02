@@ -11,10 +11,12 @@ module.exports = function(req, res) {
   });
 
   let mailOptions = {
-      from: `${req.body.email}`,
+      from: "wehavetrustissues.com",
       to: process.env.SUBMISSION_EMAIL,
       subject: req.body.subject,
-      text: req.body.body
+      text: `Hi buddy. Someone submitted this new idea:
+
+      ${req.body.body}`
   };
 
   // send mail with defined transport object
