@@ -14,9 +14,7 @@ module.exports = function(req, res) {
       from: "wehavetrustissues.com",
       to: process.env.SUBMISSION_EMAIL,
       subject: req.body.subject,
-      text: `Hi buddy. Someone submitted this new idea:
-
-      ${req.body.body}`
+      text: `${req.body.body}`
   };
 
   // send mail with defined transport object
