@@ -9,9 +9,9 @@ module.exports = function(req, res) {
           pass: process.env.GMAIL_PW
       }
   });
-
+console.log(req.body.contactEmail);
   let mailOptions = {
-      from: "wehavetrustissues.com",
+      replyTo: `${req.body.contactEmail}`,
       to: process.env.SUBMISSION_EMAIL,
       subject: req.body.subject,
       text: `${req.body.body}`
